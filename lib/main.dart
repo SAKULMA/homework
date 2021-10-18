@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework/pages/home_page.dart';
 import 'package:homework/pages/login/login_page.dart';
 
 
@@ -26,7 +27,12 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      //home: LoginPage(),
+      routes: {
+        '/Login': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
+      },
+      initialRoute: '/Login',
     );
   }
 }
